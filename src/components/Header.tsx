@@ -1,7 +1,12 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Phone, MessageCircle, Menu, X } from "lucide-react";
 
-const navLinks = ["Projects", "About", "Contact"];
+const navLinks = [
+  { label: "Projects", href: "/projects" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
+];
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -10,21 +15,31 @@ const Header = () => {
     <header className="absolute top-0 left-0 right-0 z-50">
       <div className="bg-secondary/80 backdrop-blur-sm">
         <div className="container mx-auto section-padding flex items-center justify-between py-3">
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <span className="font-heading text-2xl font-bold text-primary">U-DIG</span>
             <span className="text-secondary-foreground text-xs hidden sm:block">Heavy Equipment Rental</span>
-          </div>
+          </Link>
 
           <nav className="hidden lg:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase().replace(/\s/g, "-")}`}
-                className="text-secondary-foreground text-sm font-medium hover:text-primary transition-colors"
-              >
-                {link}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.href.startsWith("/") ? (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="text-secondary-foreground text-sm font-medium hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-secondary-foreground text-sm font-medium hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </a>
+              )
+            )}
           </nav>
 
           <div className="hidden md:flex items-center gap-6">
@@ -51,16 +66,27 @@ const Header = () => {
       {mobileOpen && (
         <div className="lg:hidden bg-secondary/95 backdrop-blur-sm">
           <nav className="container mx-auto section-padding py-4 flex flex-col gap-3">
-            {navLinks.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase().replace(/\s/g, "-")}`}
-                className="text-secondary-foreground py-2 border-b border-secondary-foreground/10 hover:text-primary transition-colors"
-                onClick={() => setMobileOpen(false)}
-              >
-                {link}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.href.startsWith("/") ? (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="text-secondary-foreground py-2 border-b border-secondary-foreground/10 hover:text-primary transition-colors"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-secondary-foreground py-2 border-b border-secondary-foreground/10 hover:text-primary transition-colors"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.label}
+                </a>
+              )
+            )}
             <a href="tel:206-123-4567" className="flex items-center gap-2 text-secondary-foreground text-sm py-2">
               <Phone size={14} />
               Call 206-123-4567
