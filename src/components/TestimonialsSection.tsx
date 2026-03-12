@@ -12,12 +12,12 @@ const testimonials = [
   {
     text: "MGC's overall commitment to quality and customer satisfaction is excellent.",
     name: "Mr. Sanjeev Agrawal",
-    company: "SAGE Group",
+    company: "SAHAR Group",
   },
   {
     text: "Working with any and all MGC employees is excellent and satisfying in all phases.",
     name: "Mr. Triplani",
-    company: "Ashima Divine City",
+    company: "Lucknow City",
   },
 ];
 
