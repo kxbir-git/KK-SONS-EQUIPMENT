@@ -17,18 +17,18 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="text-sm text-primary-foreground/60">Call Us</div>
-                    <div className="font-semibold text-lg">(+91) 9770-077-077</div>
+                    <div className="font-semibold text-lg">(+91) 83033 61848</div>
                   </div>
                 </a>
               </StaggerItem>
               <StaggerItem direction="left">
-                <a href="mailto:enquiry@mgcgroups.in" className="flex items-center gap-4 hover:text-secondary transition-colors">
+                <a href="mailto:khanshoaib38989@gmail.com" className="flex items-center gap-4 hover:text-secondary transition-colors">
                   <div className="bg-secondary text-secondary-foreground w-12 h-12 rounded flex items-center justify-center">
                     <Mail size={20} />
                   </div>
                   <div>
                     <div className="text-sm text-primary-foreground/60">Email Us</div>
-                    <div className="font-semibold">enquiry@mgcgroups.in</div>
+                    <div className="font-semibold">enquiry@khanshoaib38989@gmail.com</div>
                   </div>
                 </a>
               </StaggerItem>
@@ -39,7 +39,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="text-sm text-primary-foreground/60">Address</div>
-                    <div className="font-semibold">B/19 E8, Ishwar Nagar, Dana Pani Road, Gulmohar, Bhopal</div>
+                    <div className="font-semibold">chhatha mill sitapur road infront of Alliance, Lucknow, Uttarpradesh</div>
                   </div>
                 </div>
               </StaggerItem>
