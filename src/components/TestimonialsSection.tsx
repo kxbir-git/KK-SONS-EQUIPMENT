@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
+import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
   {
@@ -30,18 +32,28 @@ const TestimonialsSection = () => {
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto section-padding">
-        <div className="text-center mb-12">
+        <ScrollReveal className="text-center mb-12">
           <span className="text-secondary font-heading text-sm uppercase tracking-widest">Testimonials</span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mt-2">What Our Clients Say</h2>
-        </div>
+        </ScrollReveal>
 
-        <div className="max-w-2xl mx-auto text-center">
+        <ScrollReveal delay={0.2} className="max-w-2xl mx-auto text-center">
           <Quote size={40} className="text-secondary/30 mx-auto mb-4" />
-          <p className="text-muted-foreground text-lg leading-relaxed italic mb-6 min-h-[80px]">
-            "{t.text}"
-          </p>
-          <div className="font-heading font-bold text-foreground text-lg">{t.name}</div>
-          <div className="text-secondary text-sm font-medium">{t.company}</div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={current}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <p className="text-muted-foreground text-lg leading-relaxed italic mb-6 min-h-[80px]">
+                "{t.text}"
+              </p>
+              <div className="font-heading font-bold text-foreground text-lg">{t.name}</div>
+              <div className="text-secondary text-sm font-medium">{t.company}</div>
+            </motion.div>
+          </AnimatePresence>
 
           <div className="flex items-center justify-center gap-4 mt-8">
             <button
@@ -71,7 +83,7 @@ const TestimonialsSection = () => {
               <ChevronRight size={18} />
             </button>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

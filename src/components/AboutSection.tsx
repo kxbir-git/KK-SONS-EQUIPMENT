@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Award, Handshake, Heart, Users, ChevronDown, ChevronUp } from "lucide-react";
+import ScrollReveal, { StaggerContainer, StaggerItem } from "./ScrollReveal";
 
 const highlights = [
   { icon: Award, label: "We Have Reputation for Excellence" },
@@ -30,8 +31,7 @@ const AboutSection = () => {
     <section id="about" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto section-padding">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left: About text */}
-          <div>
+          <ScrollReveal direction="left">
             <span className="text-secondary font-heading text-sm uppercase tracking-widest">About Us</span>
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-6">
               Let's Build Dream Together
@@ -39,20 +39,21 @@ const AboutSection = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               The MGC group has made a prominent name for itself in the field for providing supreme quality construction and services. We understand the need, demand, and desire of today's era, and fulfill them very well. We equip their material and services to more than 80% of builders in Bhopal city.
             </p>
-            <div className="grid grid-cols-2 gap-4">
+            <StaggerContainer className="grid grid-cols-2 gap-4" staggerDelay={0.15}>
               {highlights.map((item) => (
-                <div key={item.label} className="flex items-start gap-3">
-                  <div className="bg-secondary/10 text-secondary p-2 rounded mt-0.5">
-                    <item.icon size={18} />
+                <StaggerItem key={item.label}>
+                  <div className="flex items-start gap-3">
+                    <div className="bg-secondary/10 text-secondary p-2 rounded mt-0.5">
+                      <item.icon size={18} />
+                    </div>
+                    <span className="font-heading text-sm font-semibold uppercase text-foreground">{item.label}</span>
                   </div>
-                  <span className="font-heading text-sm font-semibold uppercase text-foreground">{item.label}</span>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
-          </div>
+            </StaggerContainer>
+          </ScrollReveal>
 
-          {/* Right: Values accordion */}
-          <div>
+          <ScrollReveal direction="right" delay={0.2}>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">Our Values</h2>
             <p className="text-muted-foreground mb-6">
               We provide outstanding products and unsurpassed service that, together, deliver premium value to our customers.
@@ -75,7 +76,7 @@ const AboutSection = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
