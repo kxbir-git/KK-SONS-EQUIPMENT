@@ -8,7 +8,7 @@ const RentingEasy = () => {
           <div className="md:w-1/2">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">How we make renting easy</h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              U-Dig is very different compared to everyone else. Find out how renting heavy equipment for us is easier.
+              kk & Sons is very different compared to everyone else. Find out how renting heavy equipment for us is easier.
             </p>
             <button className="btn-outline">Find Out How</button>
           </div>
