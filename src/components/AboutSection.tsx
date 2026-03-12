@@ -37,7 +37,7 @@ const AboutSection = () => {
               Let's Build Dream Together
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              The MGC group has made a prominent name for itself in the field for providing supreme quality construction and services. We understand the need, demand, and desire of today's era, and fulfill them very well. We equip their material and services to more than 80% of builders in Bhopal city.
+              The KK & Sons has made a prominent name for itself in the field for providing supreme quality construction and services. We understand the need, demand, and desire of today's era, and fulfill them very well. We equip their material and services to more than 80% of builders in Lucknow city.
             </p>
             <StaggerContainer className="grid grid-cols-2 gap-4" staggerDelay={0.15}>
               {highlights.map((item) => (
