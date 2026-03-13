@@ -19,7 +19,7 @@ const Index = () => {
       <StatsCounter />
       <ServicesSection />
       <RecentWork />
-      <TestimonialsSection />
+      
       <ContactSection />
       <Footer />
     </div>
