@@ -41,9 +41,19 @@ const Header = () => {
               <Mail size={16} className="text-secondary" />
               <div>
                 <span className="text-muted-foreground block text-xs">Email Us</span>
-                <a href="mailto:enquiry@mgcgroups.in" className="font-semibold text-foreground">khanshoaib38989@gmail.com</a>
+                <a href="mailto:khanshoaib38989@gmail.com" className="font-semibold text-foreground">khanshoaib38989@gmail.com</a>
               </div>
             </div>
+            <div className="w-px h-10 bg-border" />
+            <a
+              href="https://wa.me/918303361848"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-[#25D366] text-white text-sm font-semibold py-2.5 px-4 rounded hover:bg-[#1ebe57] transition-colors"
+            >
+              <MessageCircle size={16} />
+              WhatsApp
+            </a>
             <a href="#contact" className="btn-primary text-sm py-2.5 px-5">Get A Quote</a>
           </div>
 
