@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Phone, Mail, Award, Menu, X } from "lucide-react";
+import { Phone, Mail, Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -42,14 +42,6 @@ const Header = () => {
               <div>
                 <span className="text-muted-foreground block text-xs">Email Us</span>
                 <a href="mailto:enquiry@mgcgroups.in" className="font-semibold text-foreground">khanshoaib38989@gmail.com</a>
-              </div>
-            </div>
-            <div className="w-px h-10 bg-border" />
-            <div className="flex items-center gap-2 text-sm">
-              <Award size={16} className="text-secondary" />
-              <div>
-                <span className="text-muted-foreground block text-xs">Global Certificate</span>
-                <span className="font-semibold text-foreground">ISO 9001:2017</span>
               </div>
             </div>
             <a href="#contact" className="btn-primary text-sm py-2.5 px-5">Get A Quote</a>
