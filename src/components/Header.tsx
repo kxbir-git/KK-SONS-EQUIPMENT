@@ -124,6 +124,9 @@ const Header = () => {
               <a href="mailto:khanshoaib38989@gmail.com" className="flex items-center gap-2">
                 <Mail size={14} /> khanshoaib38989@gmail.com
               </a>
+              <a href="https://wa.me/918303361848" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#25D366]">
+                <MessageCircle size={14} /> WhatsApp
+              </a>
             </div>
           </nav>
         </div>
