@@ -5,8 +5,8 @@ import AboutSection from "@/components/AboutSection";
 import StatsCounter from "@/components/StatsCounter";
 import ServicesSection from "@/components/ServicesSection";
 import RecentWork from "@/components/RecentWork";
-
 import ContactSection from "@/components/ContactSection";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -22,6 +22,7 @@ const Index = () => {
       
       <ContactSection />
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };
