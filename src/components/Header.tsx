@@ -86,6 +86,10 @@ const Header = () => {
               <a
                 key={link.label}
                 href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector(link.href)?.scrollIntoView({ behavior: "smooth" });
+                }}
                 className="text-primary-foreground text-sm font-heading font-medium uppercase tracking-wider px-5 py-3 hover:bg-secondary transition-colors"
               >
                 {link.label}
