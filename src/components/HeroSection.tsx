@@ -1,5 +1,6 @@
 import heroImg from "@/assets/hero-loader.png";
 import { motion } from "framer-motion";
+import EnquiryDialog from "./EnquiryDialog";
 
 const HeroSection = () => {
   return (
