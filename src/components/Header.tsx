@@ -118,7 +118,11 @@ const Header = () => {
                   key={link.label}
                   href={link.href}
                   className="text-primary-foreground py-3 border-b border-primary-foreground/10 font-heading uppercase tracking-wider text-sm hover:text-secondary transition-colors"
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMobileOpen(false);
+                    document.querySelector(link.href)?.scrollIntoView({ behavior: "smooth" });
+                  }}
                 >
                   {link.label}
                 </a>
